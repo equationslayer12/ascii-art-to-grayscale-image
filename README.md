@@ -1,4 +1,4 @@
-# ascii-art-to-grayscale-image
+# Ascii Art To Grayscale Image
 Turn ascii art into a grayscale image with python using PILLOW
 
 ## Example (The result has been rescaled)
