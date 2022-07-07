@@ -31,13 +31,16 @@ def count_file_newlines(file):
 def convert_ascii_art_to_image_data(ascii_art_file, image_width):
     image_data = []
     for line in ascii_art_file:
-        for x in line:
-            image_data.append(
-                letter_to_rgb(x)
-            )
-
+        fill_line_with_corresponding_rgb(image_data, line)
         fill_rest_of_line_with_white(image_data, line, image_width)
     return image_data
+
+
+def fill_line_with_corresponding_rgb(image_data, line):
+    for letter in line:
+        image_data.append(
+            letter_to_rgb(letter)
+        )
 
 
 def fill_rest_of_line_with_white(image_data, line, image_width):
